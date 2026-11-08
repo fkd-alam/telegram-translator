@@ -1,0 +1,24 @@
+.tgx-translation {
+  display: block;
+  margin-top: 4px;
+  padding: 4px 8px;
+  border-left: 3px solid #3390ec;
+  border-radius: 4px;
+  background: rgba(51, 144, 236, 0.12);
+  font-style: italic;
+  font-size: 0.95em;
+  line-height: 1.35;
+  white-space: pre-wrap;
+}
+/* Replace mode: hide the original text without touching Telegram's DOM. */
+.tgx-replaced { font-size: 0 !important; }
+.tgx-replaced img.emoji { display: none !important; }
+.tgx-replaced > .tgx-translation {
+  font-size: var(--tgx-fs, 15px) !important;
+  margin-top: 0; padding: 0; border: 0; background: none; font-style: normal;
+}
+.tgx-replaced .MessageMeta, .tgx-replaced .time, .tgx-replaced .time-inner {
+  font-size: calc(var(--tgx-fs, 15px) * 0.75) !important;
+}
+
+.tgx-translation.tgx-error { opacity: 0.6; font-size: 0.8em; border-left-color: #e5a50a; background: rgba(229,165,10,0.10); }

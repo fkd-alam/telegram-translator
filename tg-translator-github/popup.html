@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+ body{font-family:system-ui,sans-serif;width:240px;padding:12px;margin:0}
+ h3{margin:0 0 10px;font-size:15px}
+ label{display:block;margin:10px 0 4px;font-size:12px;color:#555}
+ select{width:100%;padding:6px}
+ .row{display:flex;align-items:center;justify-content:space-between}
+</style></head>
+<body>
+ <h3>Telegram Translator</h3>
+ <div class="row"><span>Auto-translate</span><input type="checkbox" id="enabled"></div>
+ <label for="target">Translate into</label>
+ <select id="target">
+  <option value="en">English</option><option value="hi">Hindi</option><option value="ur">Urdu</option>
+  <option value="ar">Arabic</option><option value="ru">Russian</option><option value="zh-CN">Chinese (Simplified)</option>
+  <option value="es">Spanish</option><option value="fr">French</option><option value="de">German</option>
+  <option value="pt">Portuguese</option><option value="tr">Turkish</option><option value="fa">Persian</option>
+  <option value="id">Indonesian</option><option value="ja">Japanese</option><option value="ko">Korean</option>
+  <option value="bn">Bengali</option><option value="ta">Tamil</option><option value="te">Telugu</option>
+  <option value="vi">Vietnamese</option><option value="uk">Ukrainian</option>
+ </select>
+ <label for="mode">Display</label>
+ <select id="mode">
+  <option value="below">Show under original</option>
+  <option value="replace">Replace original (hover to see it)</option>
+ </select>
+ <button id="retry" style="margin-top:12px;width:100%;padding:7px;cursor:pointer">Re-translate this chat</button>
+ <script src="popup.js"></script>
+</body></html>

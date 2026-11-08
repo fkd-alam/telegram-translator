@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Telegram Web Auto Translator",
+  "version": "1.2.0",
+  "description": "Auto-translates Telegram Web messages from any language into English or a language you choose.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://web.telegram.org/*",
+    "https://translate.googleapis.com/*",
+    "https://edge.microsoft.com/*",
+    "https://api-edge.cognitiveservices.azure.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.telegram.org/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Telegram Translator",
+    "default_icon": "icons/icon48.png"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
